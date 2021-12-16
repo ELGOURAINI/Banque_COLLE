@@ -148,6 +148,7 @@
     <ClCompile Include="Devise.cpp" />
     <ClCompile Include="DOLLAR.cpp" />
     <ClCompile Include="Euro.cpp" />
+    <ClCompile Include="GC.cpp" />
     <ClCompile Include="MAD.cpp" />
     <ClCompile Include="Operation.cpp" />
     <ClCompile Include="OperationR.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="Devise.h" />
     <ClInclude Include="DOLLAR.h" />
     <ClInclude Include="Euro.h" />
+    <ClInclude Include="GC.h" />
     <ClInclude Include="MAD.h" />
     <ClInclude Include="Operation.h" />
     <ClInclude Include="OperationR.h" />

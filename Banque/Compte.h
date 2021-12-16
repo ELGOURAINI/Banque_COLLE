@@ -1,12 +1,13 @@
 #pragma once
-#include "Client.h"
+#include "GC.h"
 #include "Devise.h"
 #include <iostream>
-#include <list>
+#include <vector>
 using namespace std;
 namespace Banque
 {
 	class Operations;
+	class Client;
 	class Compte
 	{
 	private:
@@ -14,16 +15,17 @@ namespace Banque
 		static int comptId;
 		Client* titulaire;
 		Devise* Solde;
-		static double plafond;
-		list<Operations> listOp;
+		static Devise* plafond;
+		vector<Operations*> listOp;
+		GC* ref;
 	public:
-		Compte(Client* titu,Devise* dev);
-		virtual void Crediter(Devise* D);
+		Compte(Client*,Devise*);
+		virtual string Crediter(Devise* D);
 		virtual bool Debiter(Devise* D);
 		virtual bool Verser(Compte& C,Devise* D);
-		void addOp(Operations& c);
+		void addOp(Operations&);
 		virtual void print()const=0;
-		void print_Compte() const;
+		void print_Compte() const;//facilite l'affichage des details de compte fils de compte 
 		~Compte();
 
 	protected:

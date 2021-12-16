@@ -1,7 +1,5 @@
 #include "OperationV.h"
 #include "Operation.h"
-#include "Devise.h"
-#include "Compte.h"
 #include <iostream>
 using namespace std;
 using namespace Banque;
@@ -9,8 +7,8 @@ Banque::OperationV::OperationV(Compte* C, Devise* D, string lib, string date):Op
 {
 }
 
-void Banque::OperationV::afficher()
+void Banque::OperationV::afficher()const
 {
-	cout << "Operation de Versement";
+	cout << "****************" << "Operation de Versement" << "*********************"<<endl;
 	this->detail_op();
 }

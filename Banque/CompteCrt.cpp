@@ -5,7 +5,7 @@
 using namespace std;
 using namespace Banque;
 
-MAD* decouvert = new MAD(100.0,"MAD");
+MAD* decouvert = new MAD(100.0);
 
 Banque::CompteCrt::CompteCrt(Client* c, Devise* d, Devise* decouvert) :Compte(c, d)
 {

@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <list>
+#include <vector>
 using namespace std;
 namespace Banque
 {
@@ -11,7 +11,7 @@ namespace Banque
 		string nomC;
 		string prenomC;
 		string adresse;
-		list<Compte> listComptes;
+		vector<Compte*> listComptes;
 	public:
 		Client(string nom, string prenom, string adr);
 		void addCompte(Compte& c);

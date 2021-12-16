@@ -1,20 +1,14 @@
 #pragma once
 #include "Devise.h"
-#include <iostream>
-#include "MAD.h"
-#include "Euro.h"
-using namespace std;
 namespace Banque
 {
-	class Devise;
-	class MAD;
-	class MAD;
 	class DOLLAR :public Devise
 	{
 	private:
-		string type;
+		static double tauxMAD;
+		static double tauxEuro;
 	public:
-		DOLLAR(double val, string type);
+		DOLLAR(double val);
 		DOLLAR& ConvertToDOLLAR();
 		MAD&ConvertToMAD();
 		Euro& ConvertToEURO();

@@ -1,9 +1,7 @@
 #pragma once
 #include "Compte.h"
-#include<iostream>
-using namespace std;
 namespace Banque {
-	class Devise;
+	//class Devise;
 	class CompteCrt : public Compte
 	{
 	private:

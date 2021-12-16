@@ -1,13 +1,13 @@
 #pragma once
 #include "Operation.h"
 #include "Devise.h"
-#include "Compte.h"
 #include <iostream>
+
 using namespace std;
 using namespace Banque;
-int OperationCompt_Num_Op = 0;
 
-Banque::Operations::Operations(Compte* C, Devise* m, string lib, string date):Num_Op(++Compt_Num_Op)
+int Operations::Compt_Num_Op = 0;
+Banque::Operations::Operations(Compte* C, Devise* m, string lib, string date):Num_Op(++Operations::Compt_Num_Op)
 {
 	this->Montant = m;
 	this->C = C;
@@ -17,10 +17,10 @@ Banque::Operations::Operations(Compte* C, Devise* m, string lib, string date):Nu
 
 void Banque::Operations::detail_op() const
 {
-	cout << "N° de compte :" << this->Num_Op <<endl;
-	this->C->print_Compte();
+	cout << "      N° de l'operation : " << this->Num_Op << endl;
 	this->Montant->detail_devise();
-	cout << "Date :" << this->date << endl;
+	cout << "      Date :" << this->date << endl;
+	cout << "**********************************************************" << endl;
 }
 
 

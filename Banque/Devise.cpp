@@ -38,28 +38,19 @@ bool Banque::Devise::operator>=(const Devise& D) const
 	return this->val >= D.val;
 }
 
-bool Banque::Devise::operator>=(const double d) const
-{
-	return this->val >= d;
-}
-
 bool Banque::Devise::operator<=(const Devise& D) const
 {
 	return this->val <= D.val;
 }
 
-bool Banque::Devise::operator<=(const double d) const
-{
-	return this->val <= d;
-}
 
-void Banque::Devise::print_Devise() const
+void Banque::Devise::print_Devise(string type) const
 {
-	cout << "Solde  :" <<this->val << endl;
+	cout << "      Montant  :" <<this->val <<type <<endl;
 }
 
 
-double Banque::Devise::calculer_val(const double a)
+double Banque::Devise::calculer_val(const double a)const
 {
 	return this->val*a;
 }
